@@ -41,7 +41,7 @@ Contributions are what make the open source community such an amazing place to b
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 - **[GNU GPL V3 license](https://www.gnu.org/licenses/gpl-3.0.en.html)**
-- Copyright 2020 © [https://github.com/12458](Sim Shang En), [](Sim Shang Hong), [](Joel Chan), [](Faith), [](Yuki)
+- Copyright 2020 © [Sim Shang En](https://github.com/12458), [Sim Shang Hong](#), [Joel Chan](#), [Faith](#), [Yuki](#)
 
 ## Acknowledgements
 
