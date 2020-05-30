@@ -9,7 +9,6 @@
   - [Installation](#installation)
 - [Contributing](#contributing)
 - [License](#license)
-- [Contact](#contact)
 - [Acknowledgements](#acknowledgements)
 
 ## About The Project
