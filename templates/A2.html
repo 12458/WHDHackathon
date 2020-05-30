@@ -87,10 +87,13 @@
   </nav>
 
   <div class="hero-body">
+    <div class="container ">
+      <h4 class="title is-4">Elderly basic info</h4>
+      <hr class="login-hr">
+    </div>
     <div class="container has-text-centered">
       <div class="columns is-vcentered">
         <div class="column is-4">
-          <h4 class="title is-4">Elderly basic info</h4>
           <h5 class="subtitle is-5">
             You have chosen to help:
           </h5>
@@ -123,29 +126,34 @@
     </div>
   </div>
 
-  <div class="tile is-ancestor">
-    <div class="tile is-parent">
-      <div class="tile is-child box">
-        <p class="title">List of items needed</p>
-        <ul>
-          <li>{% for i in items %}</li>
-          <li>{{% i %}}</li>
-          <li>{% endfor %}</li>
-        </ul>
-      </div>
-      <div class="tile is-4 is-parent is-vertical">
-        <div class="tile is-child box">
-          <div class="buttons">
-            <button class="button is-success is-fullwidth" formaction="A3.html">Delivered</button>
+  <div class="hero-body">
+    <div class="container ">
+      <hr class="login-hr">
+      <h4 class="title is-4">Shopping details</h4>
+      <div class="tile is-ancestor">
+        <div class="tile is-parent">
+          <div class="tile is-child box">
+            <p class="subtitle is-5">List of items needed</p>
+            <ul>
+              <li>{% for i in items %}</li>
+              <li>{{% i %}}</li>
+              <li>{% endfor %}</li>
+            </ul>
           </div>
-          <p>
-            <button class="button is-fullwidth">I’m Reaching in 30 minutes</button>
-          </p>
-          <p><button class="button is-fullwidth" formaction="H0.html">Cancel</button></p>
-          <p><button class="button is-fullwidth" formaction="S1.html">Contact Support</button></p>
+          <div class="tile is-4 is-parent is-vertical">
+            <div class="tile is-child box">
+              <div class="buttons">
+                <button class="button is-success is-fullwidth" formaction="A3.html">Delivered</button>
+              </div>
+              <p>
+                <button class="button is-fullwidth">I’m Reaching in 30 minutes</button>
+              </p>
+              <p><button class="button is-fullwidth" formaction="H0.html">Cancel</button></p>
+              <p><button class="button is-fullwidth" formaction="S1.html">Contact Support</button></p>
+            </div>
+          </div>
         </div>
       </div>
-
     </div>
   </div>
   </div>
