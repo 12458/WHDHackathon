@@ -20,16 +20,26 @@ def login():
         username=request.form["username"]
         password=request.form["pass"]
         login_or_signup=request.form["submit"]
+<<<<<<< Updated upstream
         if len(username)>2 & len(password)>2:
+=======
+        if login_or_signup == "submit":
+>>>>>>> Stashed changes
             #authentication for user goes here
             session["user"] = username
             exis_user_type = "elderly" 
             #change to "elderly" or "volunteer" as necessary
             if exis_user_type == "elderly":
                 return redirect(url_for("choose_display"))
+<<<<<<< Updated upstream
             if exis_user_type == "volunteer":
                 return redirect(url_for("pick_an_elderly"))
             if exis_user_type == "dono":
+=======
+            elif exis_user_type == "volunteer":
+                return redirect(url_for("pick_an_elderly"))
+            elif exis_user_type == "dono":
+>>>>>>> Stashed changes
                 return redirect(url_for("dono"))
         if login_or_signup == "new_user":
             return redirect(url_for("new_user_type"))
@@ -81,8 +91,12 @@ def volunteer_sign_up():
             password = request.form["pass"]
             pass_verify = request.form["pass_verify"]
             contact1 = request.form["contact1"]
+<<<<<<< Updated upstream
             contact2 = request.form["contact2"]
             email = request.form["email"]
+=======
+            area = request.form["area"]
+>>>>>>> Stashed changes
             address = request.form["address"]
             if pass_verify == password:
                 session["user"] = username
@@ -119,12 +133,17 @@ def choose_display():
             if disp_option == "logout":
                 return redirect(url_for("logout"))
             elif disp_option == "browsing":
+<<<<<<< Updated upstream
                 return redirect(url_for("browsing"))
+=======
+                return redirect(url_for("grocery_shopping"))
+>>>>>>> Stashed changes
             elif disp_option == "no_browsing":
                 return redirect(url_for("voice_order"))
         else: 
             return render_template("C1.html")
     else:
+<<<<<<< Updated upstream
         return redirect(url_for("login"))
 
 
@@ -132,6 +151,19 @@ def choose_display():
 def grocery_shopping():
     pass
 
+=======
+        return redirect(url_for("home"))
+
+
+@app.route("/C2a")
+def grocery_shopping():
+    pass
+
+@app.route("/C2b")
+def voice_order():
+    pass
+
+>>>>>>> Stashed changes
 @app.route("/C3")
 def order_and_checkout():
     pass
@@ -147,7 +179,11 @@ def supp():
 @app.route("/logout", methods=["POST", "GET"])
 def logout():
     session.pop("user", None)
+<<<<<<< Updated upstream
     return redirect(url_for("login"))
+=======
+    return redirect(url_for("home"))
+>>>>>>> Stashed changes
 
 if __name__ == "__main__":
     app.run(debug=True)
