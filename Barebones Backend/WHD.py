@@ -11,8 +11,6 @@ def home():
             return redirect(url_for("login"))
         elif exis_check == "new_user":
             return redirect(url_for("new_user_type"))
-        else:
-            return render_template("H0.html")
     else:
         return render_template("H0.html")
 
@@ -21,16 +19,20 @@ def login():
     if request.method == "POST":
         username=request.form["username"]
         password=request.form["pass"]
-        #authentication for user goes here
-        session["user"] = username
-        exis_user_type = "elderly" 
-        #change to "elderly" or "volunteer" as necessary
-        if exis_user_type == "elderly":
-            return redirect(url_for("choose_display"))
-        if exis_user_type == "volunteer":
-            return redirect(url_for("pick_an_elderly"))
-        if exis_user_type == "volunteer":
-            return redirect(url_for("dono"))
+        login_or_signup=request.form["submit"]
+        if len(username)>2 & len(password)>2:
+            #authentication for user goes here
+            session["user"] = username
+            exis_user_type = "elderly" 
+            #change to "elderly" or "volunteer" as necessary
+            if exis_user_type == "elderly":
+                return redirect(url_for("choose_display"))
+            if exis_user_type == "volunteer":
+                return redirect(url_for("pick_an_elderly"))
+            if exis_user_type == "dono":
+                return redirect(url_for("dono"))
+        if login_or_signup == "new_user":
+            return redirect(url_for("new_user_type"))
     else:
         if "user" in session:
             return redirect(url_for("choose_display"))
@@ -42,26 +44,71 @@ def new_user_type():
     if request.method == "POST":
         new_usr_type = request.form["user_type"]
         if new_usr_type == "elderly":
-            return redirect(url_for("L"))
+            return redirect(url_for("elderly_sign_up"))
         elif new_usr_type == "volunteer":
-            return redirect(url_for("L5"))       
+            return redirect(url_for("volunteer_sign_up"))
+        elif new_usr_type == "dono":
+            return redirect(url_for("dono"))       
     else:
         return render_template("L3.html")
 
-@app.route("/L1")
+@app.route("/L1", methods=["POST", "GET"])
 def elderly_sign_up():
+    if request.method == "POST":
+        full_name = request.form["full_name"]
+        username = request.form["username"]
+        password = request.form["pass"]
+        pass_verify = request.form["pass_verify"]
+        contact1 = request.form["contact1"]
+        contact2 = request.form["contact2"]
+        email = request.form["email"]
+        address = request.form["address"]
+        if pass_verify == password:
+            session["user"] = username
+            user_type = "elderly"
+            return redirect(url_for("choose_display"))
+        else:
+            return render_template("L1.html")
+    else:
+        return render_template("L1.html")
+
+
+@app.route("/L2", methods=["POST", "GET"])
+def volunteer_sign_up():
+        if request.method == "POST":
+            full_name = request.form["full_name"]
+            username = request.form["username"]
+            password = request.form["pass"]
+            pass_verify = request.form["pass_verify"]
+            contact1 = request.form["contact1"]
+            contact2 = request.form["contact2"]
+            email = request.form["email"]
+            address = request.form["address"]
+            if pass_verify == password:
+                session["user"] = username
+                user_type = "volunteer"
+                return redirect(url_for("pick_an_elderly"))
+            else:
+                return render_template("L2.html")
+        else:
+            return render_template("L2.html")
+
     
 @app.route("/A1")
 def pick_an_elderly():
-
+    pass
+    
 @app.route("/A2")
 def selected_grocery_address():
+    pass
 
 @app.route("/A3")
 def thank_you():
+    pass
 
 @app.route("/B1")
 def dono():
+    return render_template("B1.html")
 
 @app.route("/C1", methods=["POST", "GET"])
 def choose_display():
@@ -76,31 +123,31 @@ def choose_display():
             elif disp_option == "no_browsing":
                 return redirect(url_for("voice_order"))
         else: 
-            return render_template("auth_test.html")
+            return render_template("C1.html")
     else:
         return redirect(url_for("login"))
 
 
-
 @app.route("/C2")
 def grocery_shopping():
+    pass
 
 @app.route("/C3")
 def order_and_checkout():
+    pass
 
 @app.route("/C4")
 def order_tracking():
+    pass
 
 @app.route("/S1")
 def supp():
+    pass
 
-@app.route("/acc", methods=["POST","GET"])
-def request():
-    if request.method == "POST":
-        Name = request.form["nm"]
-        Email = request.form["eml"]
-        return redirect(url_for("C2"))
-
+@app.route("/logout", methods=["POST", "GET"])
+def logout():
+    session.pop("user", None)
+    return redirect(url_for("login"))
 
 if __name__ == "__main__":
     app.run(debug=True)
