@@ -47,10 +47,43 @@ class Session_Client:
             if len(veg) != len(quan):
                 for x in range(len(veg) - len(quan)):
                     parameters['number'].append(1.0)
+            
+            leafy = ['wheat grass', '']
 
+            ## Iterating through all the vegetables in the parameters
             for i in range(len(veg)):
-                veggie = veg[i]
-                
+                veggie = veg[i].lower()
+                ## Iterating through the vegetable categories in price.json
+                for cate in price.keys():
+                    ## If the vegetable type is part of the vegetable categories name
+                    if veggie in cate:
+                        variety1 = price[cate]
+                        selection = []
+                        for product in variety1.keys():
+                            if veggie.capitalize() in product:
+                                selection.append(product)
+
+                        chosen_veg = input(f"Please provide the full name of the product you'd like to purchase: {selection}\n")
+
+                        while chosen_veg not in selection:
+                            chosen_veg = input(f"Please provide the full name of the product you'd like to purchase: {selection}\n")
+                        
+                        with open("order_list.csv", "a") as file:
+                            f = csv.writer(file)
+                            list1 = [f"{chosen_veg}", f"{quan[i]}", f"{variety1[chosen_veg]}"]
+                            f.writerow(list1)
+            
+            with open("order_list.csv", "r") as file2:
+                total_cost = 0
+                for row in file2:
+                    row = row.split(",")
+                    total_cost += float(row[2])
+                    order += "Product Name: " + row[0] + ", Quantity: " + row[1].strip(".0") + ", Unit Price: $" + row[2]
+            
+            order += "Total Cost: $" + str(total_cost)
+
+            with open("order_list.csv", "w") as file3:
+                pass
         
             return queryText, order
             
