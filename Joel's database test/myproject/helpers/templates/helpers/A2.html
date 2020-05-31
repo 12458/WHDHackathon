@@ -98,7 +98,7 @@
             You have chosen to help:
           </h5>
           <h5 class="subtitle is-5">
-            {{% elderly_first_name %}}
+            {{ elderly_first_name }}
           </h5>
         </div>
         <div class="column is-4">
@@ -106,7 +106,7 @@
             Address of elderly:
           </h5>
           <h5 class="subtitle is-5">
-            {{% address %}}
+            {{ address }}
           </h5>
         </div>
         <div>
@@ -114,12 +114,17 @@
             Payment method
           </h5>
           <div class="buttons has-addons is-centered">
-            <button class="button is-success is-selected" disabled>Cash on delivery</button>
-            <button class="button" disabled>
+            {% if charity %}
+            <button class="button" disabled>Cash on delivery</button>
+            <button class="button is-selected is-success" disabled>
               Covered by Charity
             </button>
-            </h5>
+            {% else %}
+            <button class="button is-success is-selected" disabled>Cash on delivery</button>
+            <button class="button" disabled>
+            {% endif %}
           </div>
+          
 
         </div>
       </div>
@@ -136,7 +141,7 @@
             <p class="subtitle is-5">List of items needed</p>
             <ul>
               <li>{% for i in items %}</li>
-              <li>{{% i %}}</li>
+              <li>{{ i }}</li>
               <li>{% endfor %}</li>
             </ul>
           </div>
