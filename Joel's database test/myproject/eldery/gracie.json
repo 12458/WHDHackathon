@@ -1,0 +1,13 @@
+{
+    "type": "service_account",
+    "project_id": "gracie-ucroqs",
+    "private_key_id": "f6c39bba8a51c6ef1eaf33d1ace2262816b2cc34",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCicJ4l1JWRQwnt\ne1W3vp/YAD8yIMP4FFtNBQlC/MRIytdkR6C4uPHUq+q+ifII9t4d8ML1Qsn9rLNN\nm6ff8yhmu1PQt/IVzmfc5ZiwVdcB/u1XjygTxsckNnA//Xw5p3D2pKVX7JBLdyCK\nV3Tc+jf7tc9U8H8+2n/eb99xPCWNDnvv2I1GPGEUKwv9lam8svGl4/yJ4iSVo2kJ\nVgK3uydUX/HU59EKMrYihK6Zhcj9e2MZOs7NHV6O5h6DBMny/03j9+1jqoFkuHJP\nKg6HdvfMn2bQXP3EzmCOGdPqivJ2SLDml9TG8iYscyiNO9oyuzznBIp6QTt2CwiU\nu3BPOQVvAgMBAAECggEAMu0wv7aCv7xvR9tzd7xVO7B0H6CjH8suBpsOGMjLNvEV\nDzTfoBongx/05BC2Z3YSE/vv+1mZnyS+QBYNTwpaP776G4UX6htAd8IpmRsIYfFM\n8rcIfw7CT0mb7ovnnuGuaj0bM1IQuQAbnROnKUJvO8R3wG73zbpN/WxAdq0/LpX7\n8YOgrSLNe9Dayn+1xVX9a4kE7JJ0rB63HkDHwr9LT2lijQrFfRms08ChzRTL9tER\n09MG6EmaCRY4dzjKRpBpIN2iAcr8T1/r3dWLXJSKVTZUx6eYI5rop/X599H6BlKK\ndWqDI6KBJQOv6b7pTnQKQmtm4pFCdPRsor62ddBmwQKBgQDgnd1LLUjGGgZlg+aB\n/nac2heyq0KetHtN+lPtqYDnvekCU1F5IYz95gdUk+n2FDxrm3VK26hUDx4cPYHp\nQuYibXeH0xVa2G54c9nRl60Axw1FsPi5UyaUFs1MG5KPms7RZj1B249Getit7Otf\nFZEsYEb8CPGeyo/xRmfsUKbXrwKBgQC5Is1yxHODeIDuObXuDHJ7w1OGYm2LcRc4\nVSzhb3LbjCoSt8BJvm6v0IWhXmtJgxiSJY22Y1GQjiTZupi7VGsurIw8IalgmuBP\nUdrJJHG1dnVd21oHNx0bt3Bj0+4KWnzif5mxeYREpAfmTWxYlYAgTo1YvgwpdcNS\n+PyKCXZeQQKBgBKGUoLpuC/GY7KpnzAnaWbkQcIVh8gJAIZc1+Eo8p2qNvZfIsAH\nuVYTS5V5IXmPD7CcQJ8s4IQWPxh7JiSzxMEgIBSOnxs/8FR00YkMplMDF6AgyVKX\nff4Gp2XYfEzlqprwgKrWzck1RnuJp5vO7osnYZNVtX+wGxD+CoId4LS3AoGAY3nt\nxnMEVmoTbO2ZcbVCdnm3kYelsL0tatlpaiBGKO2hVbliGr22H8X9Z32iTDeipjSD\ndrLbCr810b/PfSiZBtUz7MNxjTTqvfQPiPCKIKTr32iTcTkN7Oyd+SXQy8NfQxyo\n6pGOnos8q2SCiP6bf8B1dm93fXeHYjfjChCXh4ECgYBW75HzV9M1eaCsyBTRWXXY\nDqX1j3BkmQQwQcBZY6krOFE8OHYORHjaBj/myDeh8+d+Ieme0VVL5dS5K5yQh5XT\nHt/T+r5llxBbn1CbMPG9+Vmt0VJbBrKu0BvwNq6Elibxjk2BbXQj/nQGlPuskmjL\ne4vZXPj86QJmB0xvUv8BeQ==\n-----END PRIVATE KEY-----\n",
+    "client_email": "graciemain@gracie-ucroqs.iam.gserviceaccount.com",
+    "client_id": "113304811472164201511",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/graciemain%40gracie-ucroqs.iam.gserviceaccount.com"
+}
+  

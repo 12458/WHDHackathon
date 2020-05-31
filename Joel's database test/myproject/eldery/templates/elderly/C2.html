@@ -62,47 +62,62 @@
 
   <div class="hero-body">
     <div class="container">
-      <form class="form-group" action="C3.html" method="post">
+      <form class="form-group" action="#" method="post">
         <div class="form-group">
-          <label for="exampleFormControlTextarea1">Enter your order here</label>
-            <form action="#" method="post">
-              <input name="order_box" type = "text">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="e.g. Tomato"></textarea>
+          <div class="box">
+            <label for="exampleFormControlTextarea1">Enter your order here</label>
+              <input name="order_box" type="text" placeholder="e.g. Tomato" class="form-control" id="exampleFormControlTextarea1" rows="3">
               </input>
-            </form>
-
-          <br>
-          <br>
-
-          <p> Or you could also record your voice!</p>
-          <p>/*insert voice recorder here faith; Added a button*/</p>
-          <button type="button" class="btn btn-secondary btn-lg">Voice Record</button>
-          <select id="encodingTypeSelect">
-            <option value="wav">Waveform Audio (.wav)</option>
-            <option value="mp3">MP3 (MPEG-1 Audio Layer III) (.mp3)</option>
-            <option value="ogg">Ogg Vorbis (.ogg)</option>
-          </select>
-
-          <button id="recordButton">Record</button>
-          <button id="stopButton" disabled>Stop</button>
-
-          <h3>Log</h3>
-          <pre id="log"></pre>
-
-          <h3>Recordings</h3>
-          <ol id="recordingsList"></ol>
-
-
-          <br>
-          <br>
-
-          <p>{{NLPoutput}} - To be placed in textarea</p>
-
-          <div class="buttons" formaction="C3.html">
-            <a class="button is-primary">
-              Submit
-            </a>
           </div>
+          
+          <div class="box">
+            <!-- Insert Here -->
+            <div id="controls">
+              <button id="recordButton">Record</button>
+              <button id="pauseButton" disabled>Pause</button>
+              <button id="stopButton" disabled>Stop</button>
+             </div>
+             <div id="formats">Format: start recording to see sample rate</div>
+             <p><strong>Recordings:</strong></p>
+             <ol id="recordingsList"></ol>
+             <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+             <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+             <script src="/static/js/app.js"></script>
+
+            <!-- END Insert here -->
+          </div>
+
+          <div class="box">
+            <table class="table is-striped is-hoverable is-fullwidth is-bordered">
+              <thead>
+                <tr>
+                  <th>Product Name</th>
+                  <th>Quantity</th>
+                  <th>Unit Price</th>
+                  <th>Selected</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>FairPrice Low GI Bread - Multigrain 400g Halal</td>
+                  <td>1</td>
+                  <td>$2.8</td>
+                  <td>
+                    <div class="container is-centered has-text-centered">
+                      <label class="checkbox is-centered ">
+                        <input type="checkbox">
+                      </label>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="buttons" formaction="C3.html">
+              <a class="button is-primary">
+                Submit
+              </a>
+            </div>
       </form>
     </div>
   </div>
@@ -112,4 +127,40 @@
 </body>
 <script src="js/WebAudioRecorder.min.js"></script>
 <script src="js/app.js"></script>
+
+
+</body>
+<script src="js/WebAudioRecorder.min.js"></script>
+<script src="js/app.js"></script>
+
+
+</body>
+<script src="js/WebAudioRecorder.min.js"></script>
+<script src="js/app.js"></script>
+
+
+</body>
+<script src="js/WebAudioRecorder.min.js"></script>
+<script src="js/app.js"></script>
+
+
+</body>
+<script src="js/WebAudioRecorder.min.js"></script>
+<script src="js/app.js"></script>
+
+
+</body>
+<script src="js/WebAudioRecorder.min.js"></script>
+<script src="js/app.js"></script>
+
+
+</body>
+<script src="js/WebAudioRecorder.min.js"></script>
+<script src="js/app.js"></script>
+
+
+</body>
+<script src="js/WebAudioRecorder.min.js"></script>
+<script src="js/app.js"></script>
+
 </html>
