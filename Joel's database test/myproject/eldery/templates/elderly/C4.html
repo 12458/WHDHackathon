@@ -1,37 +1,82 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <meta charset="utf-8">
-    <title>Elderly Support</title>
-  </head>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elderly support- Order tracking</title>
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <!-- Bulma Version 0.8.2-->
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.2/css/bulma.min.css" />
+  <link rel="stylesheet" type="text/css" href="../css/forum.css">
+</head>
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="navbar_header">
-    <a class="navbar-brand" href="L0.html">Elderly Support</a>
+  <nav class="navbar is-white topNav">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="H0.html">
+          Elderly Support
+        </a>
+        <div class="navbar-burger burger" data-target="topNav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div id="topNav" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="H0.html">Home</a>
+          <a class="navbar-item" href="landing.html">How it works</a>
+          <a class="navbar-item" href="blog.html">Our team</a>
+          <a class="navbar-item" href="S1.html">Connect</a>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons" formaction="L0.html">
+              <a class="button is-primary">
+                <strong>Sign up</strong>
+              </a>
+              <a class="button is-light" formaction="L3.html">
+                Log in
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
 
-  <div class="jumbotron">
-    <h1 class='display-4'>Thank you for ordering with us</h1>
-    <p class = 'my-4'> The Current Status of your order is {{order_status}}</p>
-    <form  action="L0.html" method="post">
-    <button type="submit" class="btn btn-primary">Back to Home</button>
-    </form>
-    <br>
-    <form  action="S1.html" method="post">
-    <button type="submit" class="btn btn-primary">Contact Support</button>
-    </form>
-
-
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title is-2">Thank you for ordering with us</h1>
+      <p class="subtitle is-4"> The Current Status of your order is order is on it's way</p>
+      <form action="h0.html" method="post">
+        <button type="submit" class="button is-medium is-primary">Back to Home</button>
+      </form>
+      <br>
+      <form action="S1.html" method="post">
+        <button type="submit" class="button is-medium is-primary">Contact Support</button>
+      </form>
     </div>
+  </div>
+</body>
 
-
-
-  </body>
 </html>

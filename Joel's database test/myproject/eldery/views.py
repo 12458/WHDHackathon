@@ -4,6 +4,9 @@ from myproject.models import Elderly,Grocery
 
 from flask_bcrypt import Bcrypt
 from hashlib import sha256
+## Faith's
+from dialogflow_gracie import Session_Client
+##
 bcrypt = Bcrypt()
 elderly_blueprints = Blueprint('elderly',__name__, template_folder='templates/elderly')
 
@@ -57,13 +60,21 @@ def elderly_login():
 def groceries(): #DO NOT CHANGE THIS FUNCTION NAME WITHOUT CHANGING URL ABOVE
     if "user" in session:
         if request.method == "POST":
-            purchases=request.form["order_box"] #note to faith, here is where the user's text input will be
+            queryText=request.form["order_box"] #note to faith, here is where the user's text input will be
+            
+            sess = Session_Client()
+            order = sess.dialogflow(queryText)
+            print(order)
             elderly = Elderly.query.filter_by(username= session["user"]).first()
-            Elderlies_id = elderly.id # need help here - call when going through - Joel - Take out elderlies.id
-            grocer = Grocery(purchases,Elderlies_id)
+            Elderlies_id = elderly.id
+            grocer = Grocery(queryText,Elderlies_id) 
             db.session.add(grocer)
             db.session.commit()
+           
+            
             return redirect(url_for('elderly.order_checkout'))
+
+
         else:
             return render_template("C2.html")
     else:
