@@ -26,22 +26,22 @@ def volunteer_sign_up(): #Helper Sign up
                 db.session.commit()
                 session["user"] = username
                 user_type = "volunteer"
-                return redirect(url_for("pick_an_elderly"))
+                return redirect(url_for("helpers.pick_an_elderly"))
             else:
                 return render_template("L2.html")
         else:
             return render_template("L2.html")
-
+        
 @helpers_blueprint.route('/L5') #connect HTML plz
-def L5():
+def volunteer_login():
     if request.method == "POST":
             username = request.form["username"]
             password = request.form["pass"]
-            Bleh = Helper.query.filter_by(username=username)
+            Bleh = Helper.query.filter_by(username=username).first()
             correct = Bleh.password
             check = bcrypt.check_password_hash(correct,password)
             if check:
-                return redirect(url_for("pick_an_elderly"))
+                return redirect(url_for("helpers.pick_an_elderly"))
             else:
                 return render_template("L5.html")
     return render_template('L5.html')
