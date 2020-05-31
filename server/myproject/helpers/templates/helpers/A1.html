@@ -62,6 +62,7 @@
     </div>
   </nav>
 
+  <button type="submit" name="elderly_selection" value={{i}}>{{i}}</button>
   <section class="container">
     <div class="block">
       <h1 class="title">List of Elderly to help:</h1>
@@ -72,30 +73,16 @@
           <tr>
             <th>Name Name</th>
             <th>Area of Residence</th>
-            <th>Number of items</th>
+
           </tr>
         </thead>
         <tbody>
+          {% for i in range(len(name_list)) %}
           <tr>
-            <td><a href="A2.html">Rick</a></td>
-            <td>1 Read Rd</td>
-            <td>5</td>
+            <td><button type="submit" name="elderly_selection" value={{i}}>{{print(name_list[i])}}</button></td>
+            <td>{{area_list[i]}}</td>
           </tr>
-          <tr>
-            <td><a href="A2.html">Daryl</a></td>
-            <td>AAAAAAA</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td><a href="A2.html">Glen</a></td>
-            <td>died</td>
-            <td>3</td>
-          </tr>
-          <tr>
-            <td><a href="A2.html">Carol</a></td>
-            <td>HELP</td>
-            <td>3</td>
-          </tr>
+          {{% endfor %}}
         </tbody>
       </table>
     </div>
