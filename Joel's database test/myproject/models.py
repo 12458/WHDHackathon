@@ -28,7 +28,7 @@ class Elderly(db.Model):
         if self.helper:
             return f" {self.full_name} is helped by {self.helper}"
         else:
-            return f"{self.full_name}"
+            return f"{self.password}"
 
 class Grocery(db.Model):
 

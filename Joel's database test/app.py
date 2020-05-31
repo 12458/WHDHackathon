@@ -10,7 +10,7 @@ def home():
     if request.method == "POST":
         exis_check=request.form["exis_check"]
         if exis_check == "exis_user":
-            return redirect(url_for("exis_user_type"))
+            return redirect(url_for("login_user_type"))
         elif exis_check == "new_user":
             return redirect(url_for("new_user_type"))
     else:
@@ -21,13 +21,11 @@ def login_user_type():
     if request.method == "POST":
         exis_user_type=request.form["exis_user_type"]
         if exis_user_type == "exis_elderly":
-            redirect(url_for("elderly.elderly_login"))
+            return redirect(url_for("elderly.elderly_login"))
         elif exis_user_type == "exis_volunteer":
-            redirect(url_for("helpers.volunteer_login"))
+            return redirect(url_for("helpers.volunteer_login"))
         elif exis_user_type == "dono":
-            redirect(url_for("dono"))
-        elif exis_user_type == "login":
-            return redirect(url_for("login_user_type"))
+            return redirect(url_for("dono"))
         else:
             return render_template("L0.html")
     else:
