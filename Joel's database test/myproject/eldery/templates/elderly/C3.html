@@ -20,7 +20,13 @@
   <div class="jumbotron">
     <form class="" action="C4.html" method="post">
       <h1 class='display-4'>Please confirm your final order</h1>
-      <p class = 'my-4'> {{elderly_order}}</p>
+      <p class = 'my-4'> 
+        <ul>
+          {% for i in groceries_ordered %}
+          <li>{{i}}</li>
+          {% endfor %}
+        </ul>
+      </p>
       <button type="submit" class="btn btn-primary">Confirm</button>
 
     </form>

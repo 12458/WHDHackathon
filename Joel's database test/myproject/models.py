@@ -25,10 +25,10 @@ class Elderly(db.Model):
         self.address = address
 
     def __repr__(self):
-        if self.groceries:
-            return f" {self.full_name} would like {self.groceries}"
+        if self.helper:
+            return f" {self.full_name} is helped by {self.helper}"
         else:
-            return f"{self.full_name} has no orders yet"
+            return f"{self.full_name}"
 
 class Grocery(db.Model):
 
@@ -55,7 +55,7 @@ class Helper(db.Model):
     address = db.Column(db.Text)
     elderly_id = db.Column(db.Integer,db.ForeignKey('Elderlies.id'))
 
-    def __init__(self,name,password,contact,area,address):
+    def __init__(self,full_name,username,password,contact1,area,address):
         self.full_name = full_name
         self.username = username
         self.password = password
